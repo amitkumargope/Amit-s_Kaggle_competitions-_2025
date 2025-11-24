@@ -278,7 +278,7 @@ Potential enhancements for better performance:
 
 ## 👨‍💻 Author
 
-**PhD Research Project 2025-2026**
+**Amit Kumar Gope (AI Research Scientist - Materials and Modelling)**
 
 ## 📄 License
 
@@ -298,3 +298,4 @@ For questions or collaborations, please reach out through the project repository
 **Last Updated**: November 24, 2025
 
 ⭐ If you find this project helpful, please consider giving it a star!
+
