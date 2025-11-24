@@ -1,12 +1,12 @@
 # # Loan Payback Prediction Analysis
 # ## Comprehensive Analysis and Interactive Dashboard for Stakeholders
-# 
-# This notebook provides:
-# - Detailed Exploratory Data Analysis (EDA)
+## Project Overview
+# # - Detailed Exploratory Data Analysis (EDA)
 # - Feature Engineering and Preprocessing
 # - Multiple ML Models Comparison
 # - Interactive Dashboard for Stakeholders
 # - Predictions for Test Set
+# Done by: Amit Kumar Gope (AI Researcher & Data Scientist)
 
 # %%
 # Import necessary libraries
