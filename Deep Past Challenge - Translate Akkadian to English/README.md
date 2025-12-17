@@ -9,7 +9,19 @@ This project tackles the challenging task of translating **transliterated Akkadi
 - **Training Set**: 1,200+ parallel Akkadian-English sentence pairs
 - **Test Set**: 3 test examples for prediction
 - **Lexicon**: 3,500+ Akkadian word entries from electronic Babylonian Library (eBL)
+- **Publications**: ~900 OCR'd PDFs with multilingual translations (German, French, Turkish, English)
+- **Published Texts**: 11,000+ tablet transliterations with metadata
 - **Domain**: Ancient administrative documents and personal correspondence (Old Assyrian period)
+
+### Data Extraction Challenge
+
+The publications.csv contains OCR output from ~900 scholarly PDFs. Before training, you need to:
+1. **Extract translations** from mixed-language OCR text
+2. **Match** transliterations with their translations using document IDs
+3. **Normalize** all translations to English (from German, French, Turkish, etc.)
+4. **Align** at sentence level for optimal training
+
+Our notebook includes a complete data reconstruction pipeline for this!
 
 ### Key Statistics:
 - **Average Akkadian sentence length**: 57.5 words
@@ -18,6 +30,35 @@ This project tackles the challenging task of translating **transliterated Akkadi
 - This demonstrates Akkadian's morphological richness!
 
 ## 🏗️ Architecture & Approach
+
+### Phase 1: Data Reconstruction (Sections 2A-2D)
+
+**Critical preprocessing** before any ML training:
+
+1. **Publication Translation Extraction**
+   - Parse OCR text from ~900 scholarly PDFs
+   - Identify document IDs and match with transliterations
+   - Extract quoted translations using regex patterns
+   - Handle multiple scholarly notation systems
+
+2. **Multilingual Translation Normalization**
+   - Detect language (German, French, Turkish, English)
+   - Use Helsinki-NLP translation models (Marian)
+   - Convert all translations to English
+   - Preserve semantic meaning across languages
+
+3. **Sentence-Level Alignment**
+   - Split Akkadian using linguistic markers (-ma, um-ma, etc.)
+   - Split English using punctuation
+   - Align using length ratio heuristics
+   - Create parallel sentence pairs for training
+
+4. **Data Augmentation from Reconstructed Corpus**
+   - Merge extracted translations with existing training data
+   - Deduplicate based on Akkadian content
+   - Create enhanced training corpus
+
+### Phase 2: Neural Translation Models
 
 ### Models Implemented:
 
