@@ -2,10 +2,10 @@
 Catechol Benchmark Hackathon (NeurIPS 2025 DnB) - Chemical Reaction Yield Prediction
 
 Author: Amit Kumar Gope
-Email: gopeami@vesuvius.com
-Organization: Vesuvius
-Date Created: December 19, 2025
-Last Modified: December 19, 2025
+Email: amitgope01vesuvius@gmail.com
+Organization: Vesuvius Group Plc
+Date Created: December 01, 2025
+Last Modified: December 01, 2025
 
 Description:
     This script implements machine learning models to predict chemical reaction yields 
@@ -4058,5 +4058,6 @@ print("   ✓ Advanced feature engineering (RBF + Polynomial)")
 print("\n" + "="*80)
 print(f"🎯 TARGET: MAE < 0.07")
 print("="*80)
+
 
 
